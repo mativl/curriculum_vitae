@@ -2,32 +2,32 @@
   <v-app>
     <v-app-bar app>
       <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
+        <span>Curriculum Vitae</span>
+        <span class="font-weight-light"> Matias Sebastian Vallarino </span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
+      <v-switch
+        class="mr-2 mt-6"
+        v-model="$vuetify.theme.dark"
+        primary
+        inset 
+        label="Dark"
+      ></v-switch>
     </v-app-bar>
 
     <v-content>
-      <HelloWorld/>
+      <Container/>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld';
+import Container from './components/Container';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Container,
   },
   data: () => ({
     //
